@@ -8,7 +8,6 @@ import { fetchContent } from "@/lib/content";
 import { ContentCard } from "@/components/ContentCard";
 import { UserAvatar } from "@/components/UserAvatar";
 import { useReactions } from "@/routes/index";
-import { cn, timeAgoSafe } from "@/lib/messages-helpers";
 
 export const Route = createFileRoute("/messages")({
   head: () => ({ meta: [{ title: "Messages · SAC Community" }, { name: "description", content: "Your private messages and tweets." }, { property: "og:title", content: "Messages" }, { property: "og:description", content: "Your private messages and tweets." }] }),
