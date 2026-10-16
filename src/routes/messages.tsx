@@ -1,13 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { MessageSquare, Send, AtSign } from "lucide-react";
+import { MessageSquare, AtSign } from "lucide-react";
 import { RequireAuth, useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchContent } from "@/lib/content";
 import { ContentCard } from "@/components/ContentCard";
 import { UserAvatar } from "@/components/UserAvatar";
 import { useReactions } from "@/routes/index";
+import { timeAgo } from "@/lib/media";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/messages")({
   head: () => ({ meta: [{ title: "Messages · SAC Community" }, { name: "description", content: "Your private messages and tweets." }, { property: "og:title", content: "Messages" }, { property: "og:description", content: "Your private messages and tweets." }] }),
