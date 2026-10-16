@@ -107,7 +107,7 @@ function Conversations() {
             <div className="min-w-0 flex-1">
               <div className="flex items-center justify-between gap-2">
                 <span className="truncate font-semibold">{c.displayName}</span>
-                <span className="shrink-0 text-xs text-muted-foreground">{timeAgoSafe(c.lastAt)}</span>
+                <span className="shrink-0 text-xs text-muted-foreground">{timeAgo(c.lastAt)}</span>
               </div>
               <p className="truncate text-sm text-muted-foreground">{c.lastBody}</p>
             </div>
